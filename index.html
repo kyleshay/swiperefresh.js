@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>scrollnav.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="swiperefresh.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <ul id="hover" class="hover">
+    </ul>
+    <ul id="nav" class="fixed-nav">
+    </ul>
+
+    <div id="ptr">
+      <span class="genericon genericon-next"></span>
+    </div>
+
+    <div id="swiperefresh">
+      <div id="allitems" class="content">
+        <div class="row"><div class="title">Primary Weapons</div><div class="nav-content sort-primary"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Special Weapons</div><div class="nav-content sort-special"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Heavy Weapons</div><div class="nav-content sort-heavy"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Helmet</div><div class="nav-content sort-helmet"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Gauntlets</div><div class="nav-content sort-gauntlets"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Chest Armor</div><div class="nav-content sort-chest"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Leg Armor</div><div class="nav-content sort-leg"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Shader</div><div class="nav-content sort-armor"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Misc</div><div class="nav-content sort-miscellaneous"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Class</div><div class="nav-content sort-class"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Emblem</div><div class="nav-content sort-emblem"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Titan</div><div class="nav-content sort-titan"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Hunter</div><div class="nav-content sort-hunter"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Warlock</div><div class="nav-content sort-warlock"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Vehicle</div><div class="nav-content sort-vehicle"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Ship</div><div class="nav-content sort-ship"><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /></div></div>
+        <div class="row"><div class="title">Ghost</div><div class="nav-content sort-ghost"><br /><br /><br /></div></div>
+      </div>
+    </div>
+
+
+    <script src="swiperefresh.js"></script>
+    <script>
+    window.onload = function() {
+      swiperefresh.init( {
+          loadingFunction: function() {
+            console.log('refreshed.')
+          }
+      } );
+    };
+    // window.addEventListener('load', function(){ // on page load
+    //   var o = {
+    //     nav: document.getElementById('nav'),
+    //     hover: document.getElementById('hover')
+    //   }
+    //   swiperefresh.init();
+    // });
+    </script>
+  </body>
+</html>

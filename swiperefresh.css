@@ -1,0 +1,53 @@
+
+#ptr {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #fff;
+	height: 50px;
+  text-align: center;
+}
+
+#ptr .genericon {
+	opacity: .6;
+	font-size: 34px;
+	width: auto;
+	height: auto;
+	transition: all .25s ease;
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+	margin-top: 5px;
+}
+.genericon-next:before { content: "swipe to refresh."; }
+.ptr-refresh #ptr .genericon {
+	-webkit-transform: rotate(270deg);
+	transform: rotate(270deg);
+}
+.ptr-loading #ptr .genericon,
+.ptr-reset #ptr .genericon {
+	display: none;
+}
+
+#swiperefresh {
+  background: radial-gradient(transparent,70%,#000) fixed,rgb(105, 125, 123);
+  background: radial-gradient(transparent,70%,#000) fixed,url(https://www.bungie.net/img/theme/destiny/bgs/gradient_green.jpg) fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	min-height: 100%;
+	z-index: 20;
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	box-sizing: border-box;
+}
+
+.ptr-reset #swiperefresh, .ptr-reset #ptr {
+	transition: all .25s ease;
+}
+
+.ptr-reset #swiperefresh {
+	-webkit-transform: translate3d( 0, 0, 0 );
+	transform: translate3d( 0, 0, 0 );
+}
